@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<input id="good" type="range" min="0" ; max="1" onclick="checkGood()">good<br>
+<input id="cheap" type="range" min="0" ; max="1" onclick="checkCheap()">cheap<br>
+<input id="fast" type="range" min="0" ; max="1" onclick="checkFast()">fast
+<script>
+    let good = true;
+    let cheap = true;
+    let fast = true;
+
+    function checkGood(){
+        good = !good;
+        if(good){
+            document.getElementById('good').value = 1;
+            if(cheap && fast){
+                document.getElementById('cheap').value = 0;
+                cheap = false;
+            }
+        } else {
+            document.getElementById('good').value = 0;
+            good = false;
+        }
+    }
+    function checkCheap(){
+        cheap = !cheap;
+        if(cheap){
+            document.getElementById('cheap').value = 1;
+            if(good && fast){
+                document.getElementById('fast').value = 0;
+                fast = false;
+            }
+        } else {
+            document.getElementById('cheap').value = 0;
+            cheap = false;
+        }
+    }
+    function checkFast(){
+        fast = !fast;
+        if(fast){
+            document.getElementById('fast').value = 1;
+            if(cheap && good){
+                document.getElementById('good').value = 0;
+                good = false;
+            }
+        } else {
+            document.getElementById('fast').value = 0;
+            fast = false;
+        }
+    }
+</script>
+</body>
+</html>

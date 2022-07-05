@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+nhap a<input id="canhHinhVuong" type="text">
+<button onclick="hinhvuong()">nhan xem </button>
+<p id="dienTich">hien thi S hinh vuong :</p>
+<p id="chivi" >hien thi  chuVi hinh vuong :</p>
+<script>
+    function hinhvuong(){
+        let canhHinhVuong = +document.getElementById('canhHinhVuong').value;
+        let dienTich = canhHinhVuong * canhHinhVuong
+        let chiVi = canhHinhVuong *4
+        document.getElementById('dienTich').innerText = dienTich + " " + 'dien tich hinh vuong'
+        document.getElementById('chivi').innerText = chiVi + " " + 'chi vi hinh vuong'
+    }
+</script>
+</body>
+</html>

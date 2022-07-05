@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>ax + b = 0</p>
+<input id="a" type="text">x &nbsp;+ <input id="b" type="text"> = 0
+<button onclick="phuongTrinhBac1()">nhan xem</button>
+<p id="hienthi">hien thi kq</p>
+<script>
+    function phuongTrinhBac1(){
+        let a = +document.getElementById('a').value
+        let b = +document.getElementById('b').value
+        if(a===0){
+            if(b===0){
+                document.getElementById('hienthi').innerText = 'phuong trinh vô sô nghiệm'
+            }else{
+                document.getElementById('hienthi').innerText = 'phuong trinh vô nghiệm'
+            }
+        }else {
+            document.getElementById('hienthi').innerText = 'phuong trinh có nghiệm la -b/a'
+        }
+
+    }
+</script>
+</body>
+</html>

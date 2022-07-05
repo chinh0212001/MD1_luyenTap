@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="a" type="text">canhA<br>
+<input id="b" type="text">canhB
+<p id="dientich"></p>
+<button onclick="dienTichTamGiacVuong()">nhan xem</button>
+<script>
+    function dienTichTamGiacVuong(){
+      let a = +document.getElementById('a').value
+      let b = +document.getElementById('b').value
+      dienTich = a * b/2
+      document.getElementById('dientich').innerText = dienTich + " " + 'la dien tich tam giac'
+
+    }
+</script>
+</body>
+</html>

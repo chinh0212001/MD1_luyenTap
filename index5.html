@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>ax^2 + bx + c = 0</p>
+<input id="a" type="text">x^2 &nbsp;+ <input id="b" type="text">x + <input id="c" type="text"> = 0
+<p id="ketqua">nhan xem</p>
+<button onclick="tinhToan()">check in</button>
+<script>
+    function tinhToan(){
+    let a = +document.getElementById('a').value
+    let b = +document.getElementById('b').value
+    let c = +document.getElementById('c'). value
+    let delta = b*b - 4 * a*c
+     if(delta < 0) {
+         document.getElementById('ketqua').innerText = 'phuong trinh vo nghiem'
+     }
+         else if  (delta === 0){
+             document.getElementById('ketqua').innerText = 'phuong trinh co nghiem kep x1 = x2 = (-b)/2*a'
+         }
+         if (delta > 0){
+             document.getElementById('ketqua').innerText ='phuong trinh co 2 nghiem phan biet'
+             x1 = (-b+Math.sqrt(delta))/(2 * a) ;
+             x2 = (-b-Math.sqrt(delta))/(2 * a)
+         }
+
+         }
+</script>
+</body>
+</html>
